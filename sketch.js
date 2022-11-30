@@ -1,3 +1,7 @@
+var FNameList, LNameList;
+var FName, LName;
+var StartPts;
+
 
 function setup(){
   Width = screen.width;
@@ -7,5 +11,5 @@ function setup(){
 
 function draw(){
   background(220);
-  
+
 }
