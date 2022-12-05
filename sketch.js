@@ -34,6 +34,7 @@ function draw(){
   displayPoints();
   displaySubtract();
   displayAdd();
+  displayStatus();
 }
 
 function mousePressed(){
@@ -59,14 +60,14 @@ function addpoints(){
 function displayName(){
   push();
   textFont(Sofachrome);
-  textSize(SHeight/18);
+  textSize(SHeight/20);
   text("Welcome", SWidth/2, SHeight/7);
   pop();
   push();
   textFont(Conthrax);
-  textSize(SHeight/18);
+  textSize(SHeight/24);
   text(FName, SWidth/2, SHeight/4);
-  text(LName, SWidth/2, SHeight/4 + SHeight/18+10)
+  text(LName, SWidth/2, SHeight/4 + SHeight/24+SHeight*0.012)
   pop();
 }
 
@@ -96,6 +97,14 @@ function displayAdd(){
   pop();
 }
 
+function displayStatus(){
+  push();
+  textFont(Conthrax);
+  textSize(SHeight/20);
+  text("STATUS", SWidth/2, SHeight*3/4);
+  text("----------------------", SWidth/2, SHeight*3/4 + SHeight/20-SHeight*0.009);
+  text("GREEN ACCESS", SWidth/2, SHeight*3/4 + SHeight/20 + SHeight*0.024)
+}
 
 function makeUserName(){
   let fNameInt = floor(random(0, FNameList.getRowCount()));
