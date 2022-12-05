@@ -50,7 +50,7 @@ function displayName(){
 function displayPoints(){
   push();
   textFont(Conthrax);
-  textSize()
+  textSize(SHeight/20)
 }
 
 
