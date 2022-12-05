@@ -35,6 +35,10 @@ function draw(){
   displayAdd();
 }
 
+function mousePressed(){
+  
+}
+
 function displayName(){
   push();
   textFont(Sofachrome);
@@ -59,11 +63,18 @@ function displayPoints(){
 
 function displaySubtract(){
   push();
+  textFont(Conthrax);
+  textSize(SHeight/20);
+  text("-", SWidth/4, SHeight/2);
+  pop();
 }
 
 function displayAdd(){
-  push()
-
+  push();
+  textFont(Conthrax);
+  textSize(SHeight/20);
+  text("+", SWidth*3/4, SHeight/2);
+  pop();
 }
 
 
