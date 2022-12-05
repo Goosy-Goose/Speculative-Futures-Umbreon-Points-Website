@@ -2,7 +2,7 @@ var SWidth, SHeight;
 var FNameList, LNameList;
 var Conthrax, SofachromeIt, Sofachrome;
 var FName, LName, UserName;
-var StartPts;
+var Pts;
 
 
 function preload(){
@@ -19,7 +19,7 @@ function setup(){
   SHeight = window.innerHeight;
   FName = "test";
   LName = "text";
-  StartPts = random(0.1, 3);
+  Pts = floor(random(10, 2000))/100;
   makeUserName();
   createCanvas(SWidth, SHeight);
   textAlign(CENTER);
@@ -28,22 +28,24 @@ function setup(){
 }
 
 function draw(){
-  background(220);
+  background(191, 208, 242);
   displayName();
-  displayPoints()
+  displayPoints();
+  displaySubtract();
+  displayAdd();
 }
 
 function displayName(){
   push();
   textFont(Sofachrome);
   textSize(SHeight/18);
-  text("Welcome", SWidth/2, SHeight/6);
+  text("Welcome", SWidth/2, SHeight/7);
   pop();
   push();
   textFont(Conthrax);
-  textSize(SHeight/23);
+  textSize(SHeight/18);
   text(FName, SWidth/2, SHeight/4);
-  text(LName, SWidth/2, SHeight/4 + SHeight/26+10)
+  text(LName, SWidth/2, SHeight/4 + SHeight/18+10)
   pop();
 }
 
@@ -51,7 +53,17 @@ function displayPoints(){
   push();
   textFont(Conthrax);
   textSize(SHeight/20)
-  text(StartPts, SWidth/2, SHeight*2/3)
+  text(Pts, SWidth/2, SHeight/2)
+  pop();
+}
+
+function displaySubtract(){
+  push();
+}
+
+function displayAdd(){
+  push()
+
 }
 
 
