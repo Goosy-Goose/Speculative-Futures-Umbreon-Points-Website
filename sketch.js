@@ -19,6 +19,7 @@ function setup(){
   SHeight = window.innerHeight;
   FName = "test";
   LName = "text";
+  StartPts = random(0.1, 3);
   makeUserName();
   createCanvas(SWidth, SHeight);
   textAlign(CENTER);
@@ -29,20 +30,27 @@ function setup(){
 function draw(){
   background(220);
   displayName();
+  displayPoints()
 }
 
 function displayName(){
   push();
   textFont(Sofachrome);
-  textSize(SHeight/20);
-  text("Welcome", SWidth/2, SHeight/5);
+  textSize(SHeight/18);
+  text("Welcome", SWidth/2, SHeight/6);
   pop();
   push();
   textFont(Conthrax);
-  textSize(SHeight/26);
-  text(FName, SWidth/2, SHeight/3);
-  text(LName, SWidth/2, SHeight/3 + SHeight/26+10)
+  textSize(SHeight/23);
+  text(FName, SWidth/2, SHeight/4);
+  text(LName, SWidth/2, SHeight/4 + SHeight/26+10)
   pop();
+}
+
+function displayPoints(){
+  push();
+  textFont(Conthrax);
+  textSize()
 }
 
 
