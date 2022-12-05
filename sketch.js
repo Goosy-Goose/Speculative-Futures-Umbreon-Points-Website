@@ -51,6 +51,7 @@ function displayPoints(){
   push();
   textFont(Conthrax);
   textSize(SHeight/20)
+  text(StartPts, SWidth/2, SHeight*2/3)
 }
 
 
