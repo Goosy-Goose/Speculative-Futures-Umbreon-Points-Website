@@ -19,7 +19,8 @@ function setup(){
   SHeight = window.innerHeight;
   FName = "test";
   LName = "text";
-  Pts = floor(random(10, 2000))/100;
+  let num = floor(random(10, 2000))
+  Pts = num;
   makeUserName();
   createCanvas(SWidth, SHeight);
   textAlign(CENTER);
@@ -36,7 +37,23 @@ function draw(){
 }
 
 function mousePressed(){
+  if(mouseY >= SHeight/2 - 0.06*SHeight && mouseY <= SHeight/2+0.02*SHeight){
+    if(mouseX>=SWidth/4 - 0.02*SWidth && mouseX<=SWidth/4 + 0.02*SWidth){
+      subpoints()
+    }
+    if(mouseX>=SWidth*3/4 - 0.02*SWidth && mouseX<=SWidth*3/4 + 0.02*SWidth){
+      addpoints()
+    }
+  }
   
+}
+
+function subpoints(){
+  Pts-= 35;
+}
+
+function addpoints(){
+  Pts+=33;
 }
 
 function displayName(){
@@ -57,7 +74,9 @@ function displayPoints(){
   push();
   textFont(Conthrax);
   textSize(SHeight/20)
-  text(Pts, SWidth/2, SHeight/2)
+  let numTxt = Pts/100
+  let numNum = numTxt.toString()
+  text(numNum, SWidth/2, SHeight/2)
   pop();
 }
 
