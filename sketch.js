@@ -15,7 +15,7 @@ function preload(){
 
 
 function setup(){
-  SWidth = window.innerWidth;
+  SWidth = window.innerWidth-14;
   SHeight = window.innerHeight;
   FName = "test";
   LName = "text";
