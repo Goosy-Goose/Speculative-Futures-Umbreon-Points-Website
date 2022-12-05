@@ -38,11 +38,11 @@ function draw(){
 }
 
 function mousePressed(){
-  if(mouseY >= SHeight/2 - 0.06*SHeight && mouseY <= SHeight/2+0.02*SHeight){
-    if(mouseX>=SWidth/4 - 0.02*SWidth && mouseX<=SWidth/4 + 0.02*SWidth){
+  if(mouseY >= SHeight/2-40 && mouseY <= SHeight/2+5){
+    if(mouseX>=SWidth/4 - 20 && mouseX<=SWidth/4 + 20){
       subpoints()
     }
-    if(mouseX>=SWidth*3/4 - 0.02*SWidth && mouseX<=SWidth*3/4 + 0.02*SWidth){
+    if(mouseX>=SWidth*3/4 - 20 && mouseX<=SWidth*3/4 + 20){
       addpoints()
     }
   }
@@ -100,7 +100,7 @@ function displayAdd(){
 function displayStatus(){
   push();
   textFont(Conthrax);
-  textSize(SHeight/20);
+  textSize(SHeight/24);
   text("STATUS", SWidth/2, SHeight*3/4);
   text("----------------------", SWidth/2, SHeight*3/4 + SHeight/20-SHeight*0.009);
   text("GREEN ACCESS", SWidth/2, SHeight*3/4 + SHeight/20 + SHeight*0.024)
