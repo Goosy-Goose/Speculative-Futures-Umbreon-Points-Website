@@ -50,7 +50,7 @@ function mousePressed(){
 }
 
 function subpoints(){
-  Pts-= 35;
+  Pts-= 36;
 }
 
 function addpoints(){
